@@ -18,3 +18,7 @@ The website now focuses on the 16-book championship bracket, official voting cal
 - The original adventure and Firebase files remain in the repository as an archive but are no longer loaded by the homepage. No configuration is required to use the single-device edition.
 - External book-cover images require network access; Rock and Roll still needs an edition/ISBN. Cover failures display a title card.
 - Core logic checks passed for January open/close, DST, later-round dependencies, counting by grade, tied winner choices, backup validation, and late-vote rejection. Live browser storage, cover loading, and staff workflow need verification on the designated device.
+
+## TV broadcast
+
+Open `tv.html` for a silent, rotating full-screen weekly matchup broadcast. It follows the Eastern calendar, displays equal-time book spotlights, voting hours, and the bracket. Use the week selector to preview a future matchup. Same-browser results are read automatically from the voting station. On a separate TV computer, open the TV page on the voting device, export its TV bracket snapshot, then import that file on the TV computer after confirming winners. The snapshot contains only confirmed winners, not individual ballots. No shared database is required. TV never modifies voting data.
