@@ -1,0 +1,6 @@
+const test=require('node:test'),assert=require('node:assert/strict');const {matches,openMatches,winnerOptions,eastern}=require('./core');
+const state={enabled:true,winners:{}};
+test('January open and close times in Eastern',()=>{assert.equal(openMatches(state,new Date('2027-01-15T12:29:00Z')).length,0);assert.deepEqual(openMatches(state,new Date('2027-01-15T12:30:00Z')).map(m=>m.id),['M07']);assert.equal(openMatches(state,new Date('2027-01-15T19:20:00Z')).length,0)});
+test('paused and future voting denied',()=>{assert.equal(openMatches({enabled:false},new Date('2027-01-15T15:00:00Z')).length,0);assert.equal(openMatches(state,new Date('2026-11-25T15:00:00Z')).length,0)});
+test('later rounds require winners; March DST',()=>{const t=new Date('2027-03-19T11:30:00Z');assert.equal(eastern(t).time,'07:30');assert.equal(openMatches(state,t).length,0);assert.equal(openMatches({...state,winners:{M09:'B01',M10:'B04'}},t)[0].id,'M13')});
+test('winner only after close; ties and zero votes',()=>{const m=matches.find(m=>m.id==='M07'),c={'0':{B03:5,B08:2},'1':{B08:3}},t=new Date('2027-01-15T19:20:00Z');assert.deepEqual(winnerOptions(m,state,c,t),['B03','B08']);assert.deepEqual(winnerOptions(m,state,{'0':{B03:2,B08:1}},t),['B03']);assert.throws(()=>winnerOptions(m,state,{},t));assert.throws(()=>winnerOptions(m,state,c,new Date('2027-01-15T19:19:00Z')))});
