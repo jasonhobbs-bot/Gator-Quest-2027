@@ -1,3 +1,4 @@
+(()=>{
 'use strict';
 const {books,matches,grades}=window.BOOK_BATTLE;
 const C=window.BattleCore, main=document.querySelector('#main'), banner=document.querySelector('#banner');
@@ -21,9 +22,9 @@ const pill=s=>'<span class="pill '+esc(s.toLowerCase().replaceAll(' ','-'))+'">'
 const official=()=>matches.filter(m=>C.status(m,state)==='Open');
 const next=()=>[...matches].filter(m=>C.status(m,state)==='Upcoming').sort((a,b)=>a.date.localeCompare(b.date))[0];
 const staff=()=>Date.now()<staffUntil;
-function top(){const c=C.clock();banner.classList.toggle('error',!storageOK||!!loadError);banner.textContent=!storageOK||loadError?'Storage warning: '+(loadError||'local storage is not available'):'Single-device station • '+c.date+' • '+c.time+' ET • '+(official().length?'Voting open':state.enabled?'Voting scheduled':'Official voting paused');document.querySelectorAll('nav a').forEach(a=>{if(a.hash==='#'+page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
+function renderBanner(){const c=C.clock();banner.classList.toggle('error',!storageOK||!!loadError);banner.textContent=!storageOK||loadError?'Storage warning: '+(loadError||'local storage is not available'):'Single-device station • '+c.date+' • '+c.time+' ET • '+(official().length?'Voting open':state.enabled?'Voting scheduled':'Official voting paused');document.querySelectorAll('nav a').forEach(a=>{if(a.hash==='#'+page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
 function route(){let p=location.hash.slice(1);page=['bracket','vote','schedule','staff'].includes(p)?p:'bracket';grade=-1;selected='';receipt=null;practice=false;msg='';render();window.scrollTo(0,0)}
-function render(){refresh();top();({bracket:bracket,vote:vote,schedule:schedule,staff:staffPage})[page]();lastGate=gate()}
+function render(){refresh();renderBanner();({bracket:bracket,vote:vote,schedule:schedule,staff:staffPage})[page]();lastGate=gate()}
 function gate(){return matches.map(m=>C.status(m,state)).join('|')}
 function bracket(){
  const champ=state.winners.M15, upcoming=next(), open=official(), count=Object.keys(state.winners).length;
@@ -75,5 +76,7 @@ function exportFile(kind){if(!staff()){render();return}try{const s=load(),prefix
 async function restore(e){if(!staff())return;const file=e.target.files?.[0];if(!file)return;try{if(file.size>20*1024*1024)throw Error('Backup file is too large.');const s=C.validate(JSON.parse(await file.text()));if(!confirm('Restore '+s.ballots.length+' official ballots and '+Object.keys(s.winners).length+' winners? This replaces existing results on this device.'))return;if(!staff())throw Error('Staff session expired.');const task=()=>save(s);if(navigator.locks?.request)await navigator.locks.request(DATA,{mode:'exclusive'},task);else task();msg='Backup restored. Official voting paused.'}catch(e){msg='Restore failed: '+e.message}render()}
 window.addEventListener('hashchange',route);
 window.addEventListener('storage',e=>{if(e.key===DATA){if(!busy)render()}});
-setInterval(()=>{refresh();top();if(page==='staff'&&!staff()&&main.querySelector('#enable')){msg='Staff session expired.';render()}else if(page!=='staff'&&!busy&&!receipt&&gate()!==lastGate)render()},5000);
+setInterval(()=>{refresh();renderBanner();if(page==='staff'&&!staff()&&main.querySelector('#enable')){msg='Staff session expired.';render()}else if(page!=='staff'&&!busy&&!receipt&&gate()!==lastGate)render()},5000);
 route();
+
+})();
