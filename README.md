@@ -42,3 +42,7 @@ Every opening matchup has a distinct featured game and a six-game playlist drawn
 ## Automatic TV results
 
 At 2:00 PM Eastern on each scheduled voting date, official votes close. Any match with a unique highest vote total advances automatically while the voting page or Gator TV is open on the voting browser, or when reopened. Ties require staff resolution; no-vote matches remain pending. Gator TV automatically changes to a winner celebration and animated final scoreboard with both totals, margin, percentages, total ballots, and updated bracket. On a separate computer, results do not automatically synchronize; export the aggregate TV results snapshot from the voting device and import on the display computer. The export includes confirmed counts, not individual ballots. Results remain in the rotating broadcast after close. No external service or background ChatGPT task is required.
+
+## Broadcast soundtrack
+
+Gator TV uses original synthesized instrumental themes and sound effects via the browser Web Audio API. Audio starts muted at 15% volume; click Enable sound once per page load to comply with browser autoplay rules. Audio changes by slide, pauses with the slideshow or when hidden, and has mute/volume controls. Winners use a drumroll, original fanfare and synthesized crowd-like noise. Live voting day includes an Eastern-time countdown to 2:00 PM; demo countdown and scores are fictional. No external recordings are used.
