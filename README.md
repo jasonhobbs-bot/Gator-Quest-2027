@@ -34,3 +34,7 @@ The iPad activity page now launches three actual games: Gator Dash (moving lane 
 ## Ten-minute arcade mode
 
 The arcade now runs a 600-second session, including short automated level introductions and results, with checkout pauses excluded. Six game types cycle into harder bonus tiers. Session completion stops all game loops. Students may end the session manually from a level introduction. Maze walls are procedurally generated, and sorting and target rounds use both books’ themed objects. Scores are in memory only. The teacher presentation links to the same activity URL. Test on the school iPads before class.
+
+## Weekly game variety
+
+Every opening matchup has a distinct featured game and a six-game playlist drawn from fourteen mechanics. Consecutive opening weeks have no shared game mechanics. Featured games: Snowflake Mirror Magic, Duck's Bike Jump, Friendship Bridge Builder, Eraser & Marker Art Trail, Dinosaur Fossil Dig, Perfect Pizza Order Builder, Knight Owl Lantern Hunt, Silly Sound Rhythm Party. Later rounds have their own playlists, using the advancing books. Some mechanics return after intervening weeks. The ten-minute session, bonus levels, grade settings and checkout pause remain intact. Book-inspired puzzles use original thematic content, not literal scenes from the books.
