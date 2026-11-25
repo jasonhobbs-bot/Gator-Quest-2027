@@ -30,3 +30,7 @@ Use `presentation.html` for the grade/matchup selector, seven teacher-led slides
 ## Arcade upgrade
 
 The iPad activity page now launches three actual games: Gator Dash (moving lane obstacle course), Catch Quest (drag-to-catch falling themed objects), and Memory Vault (matching book-themed cards). All 16 books have their own visual themes and collectibles. Seven grade settings adjust lanes, timing, targets, obstacle frequency and matching-pair counts. Students may pause for checkout, replay a round, or finish early. Typical play varies by skill; replay fills remaining time. Games use original canvas artwork and symbolic book-related objects, not story text or plot quizzes. No game scores, student identifiers or votes are persisted.
+
+## Ten-minute arcade mode
+
+The arcade now runs a 600-second session, including short automated level introductions and results, with checkout pauses excluded. Six game types cycle into harder bonus tiers. Session completion stops all game loops. Students may end the session manually from a level introduction. Maze walls are procedurally generated, and sorting and target rounds use both books’ themed objects. Scores are in memory only. The teacher presentation links to the same activity URL. Test on the school iPads before class.
