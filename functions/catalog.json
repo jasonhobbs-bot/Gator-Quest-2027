@@ -1,0 +1,133 @@
+{
+  "matches": [
+    {
+      "id": "M01",
+      "round": "Sweet Sixteen",
+      "region": "Comedy Corner",
+      "a": "B01",
+      "b": "B15",
+      "date": "2027-03-05"
+    },
+    {
+      "id": "M02",
+      "round": "Sweet Sixteen",
+      "region": "Comedy Corner",
+      "a": "B09",
+      "b": "B12",
+      "date": "2027-01-22"
+    },
+    {
+      "id": "M03",
+      "round": "Sweet Sixteen",
+      "region": "STEM Arena",
+      "a": "B04",
+      "b": "B05",
+      "date": "2027-02-05"
+    },
+    {
+      "id": "M04",
+      "round": "Sweet Sixteen",
+      "region": "STEM Arena",
+      "a": "B06",
+      "b": "B16",
+      "date": "2027-02-26"
+    },
+    {
+      "id": "M05",
+      "round": "Sweet Sixteen",
+      "region": "Friendship Fieldhouse",
+      "a": "B02",
+      "b": "B11",
+      "date": "2027-01-29"
+    },
+    {
+      "id": "M06",
+      "round": "Sweet Sixteen",
+      "region": "Friendship Fieldhouse",
+      "a": "B10",
+      "b": "B13",
+      "date": "2027-02-19"
+    },
+    {
+      "id": "M07",
+      "round": "Sweet Sixteen",
+      "region": "Discovery Dome",
+      "a": "B03",
+      "b": "B08",
+      "date": "2027-01-15"
+    },
+    {
+      "id": "M08",
+      "round": "Sweet Sixteen",
+      "region": "Discovery Dome",
+      "a": "B07",
+      "b": "B14",
+      "date": "2027-02-11"
+    },
+    {
+      "id": "M09",
+      "round": "Elite Eight",
+      "region": "Comedy Corner",
+      "sourceA": "M01",
+      "sourceB": "M02",
+      "date": "2027-03-11"
+    },
+    {
+      "id": "M10",
+      "round": "Elite Eight",
+      "region": "STEM Arena",
+      "sourceA": "M03",
+      "sourceB": "M04",
+      "date": "2027-03-11"
+    },
+    {
+      "id": "M11",
+      "round": "Elite Eight",
+      "region": "Friendship Fieldhouse",
+      "sourceA": "M05",
+      "sourceB": "M06",
+      "date": "2027-03-11"
+    },
+    {
+      "id": "M12",
+      "round": "Elite Eight",
+      "region": "Discovery Dome",
+      "sourceA": "M07",
+      "sourceB": "M08",
+      "date": "2027-03-11"
+    },
+    {
+      "id": "M13",
+      "round": "Final Four",
+      "region": "Semifinal 1",
+      "sourceA": "M09",
+      "sourceB": "M10",
+      "date": "2027-03-19"
+    },
+    {
+      "id": "M14",
+      "round": "Final Four",
+      "region": "Semifinal 2",
+      "sourceA": "M11",
+      "sourceB": "M12",
+      "date": "2027-03-19"
+    },
+    {
+      "id": "M15",
+      "round": "Championship",
+      "region": "Championship",
+      "sourceA": "M13",
+      "sourceB": "M14",
+      "date": "2027-03-26"
+    }
+  ],
+  "grades": [
+    "Pre-K",
+    "Kindergarten",
+    "1st grade",
+    "2nd grade",
+    "3rd grade",
+    "4th grade",
+    "5th grade"
+  ]
+}
