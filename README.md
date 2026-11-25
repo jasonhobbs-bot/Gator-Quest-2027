@@ -6,8 +6,8 @@ The website now focuses on the 16-book championship bracket, official voting cal
 
 1. Open the published GitHub Pages website in a normal browser on **one dedicated, supervised voting device**.
 2. Staff results: set a private four-digit PIN on that device, then enable official voting.
-3. On each scheduled voting date, students select their grade and one contender. The device clock is interpreted in America/New_York. Official ballots are accepted only from 07:30 inclusive to 14:20 exclusive Eastern on the listed date. Practice ballots do not count.
-4. After each matchup closes, staff confirm the highest vote total; ties require a staff decision. Winners advance to the next round. Later rounds require both prior winners. The championship is March 26, 2027.
+3. On each scheduled voting date, students select their grade and one contender. The device clock is interpreted in America/New_York. Official ballots are accepted only from 07:30 inclusive to 14:00 exclusive Eastern on the listed date. Practice ballots do not count.
+4. After each matchup closes at 2:00 PM Eastern, the unique highest vote total automatically advances; tied results require a staff decision. No-vote matches remain pending. Winners advance to the next round. Later rounds require both prior winners. The championship is March 26, 2027.
 5. After every voting day, export all ballots (CSV), grade totals (CSV), and a restorable JSON backup. Store the backup outside the browser. The CSV includes grade, book, matchup, and ballot timestamp, but no student name or account.
 6. To transfer to a replacement device, create the local PIN there, restore the JSON backup, then enable voting when ready. Do not conduct simultaneous official voting on multiple devices.
 
@@ -38,3 +38,7 @@ The arcade now runs a 600-second session, including short automated level introd
 ## Weekly game variety
 
 Every opening matchup has a distinct featured game and a six-game playlist drawn from fourteen mechanics. Consecutive opening weeks have no shared game mechanics. Featured games: Snowflake Mirror Magic, Duck's Bike Jump, Friendship Bridge Builder, Eraser & Marker Art Trail, Dinosaur Fossil Dig, Perfect Pizza Order Builder, Knight Owl Lantern Hunt, Silly Sound Rhythm Party. Later rounds have their own playlists, using the advancing books. Some mechanics return after intervening weeks. The ten-minute session, bonus levels, grade settings and checkout pause remain intact. Book-inspired puzzles use original thematic content, not literal scenes from the books.
+
+## Automatic TV results
+
+At 2:00 PM Eastern on each scheduled voting date, official votes close. Any match with a unique highest vote total advances automatically while the voting page or Gator TV is open on the voting browser, or when reopened. Ties require staff resolution; no-vote matches remain pending. Gator TV automatically changes to a winner celebration and animated final scoreboard with both totals, margin, percentages, total ballots, and updated bracket. On a separate computer, results do not automatically synchronize; export the aggregate TV results snapshot from the voting device and import on the display computer. The export includes confirmed counts, not individual ballots. Results remain in the rotating broadcast after close. No external service or background ChatGPT task is required.
