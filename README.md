@@ -16,7 +16,7 @@ The website now focuses on the 16-book championship bracket, official voting cal
 - Results and PIN are stored in browser localStorage, scoped to this site. They do not synchronize across browsers, devices, or public displays. Clearing site data can erase results. A local PIN is only a deterrent; it is not server-side security. Staff must supervise voting and prevent repeat ballots. Client device time can be altered. Do not use private browsing for the voting station.
 - Official votes are saved before success is displayed. The station starts paused; enabling the station does not bypass the calendar. Practice is available before January. Restore validates the backup and pauses voting; it replaces existing results after confirmation.
 - The original adventure and Firebase files remain in the repository as an archive but are no longer loaded by the homepage. No configuration is required to use the single-device edition.
-- External book-cover images require network access; Rock and Roll still needs an edition/ISBN. Cover failures display a title card.
+- External book-cover images require network access. Rock and Roll is Ruby Amy Thompson’s hardcover edition, ISBN 9781664300927. Cover failures display a title card.
 - Core logic checks passed for January open/close, DST, later-round dependencies, counting by grade, tied winner choices, backup validation, and late-vote rejection. Live browser storage, cover loading, and staff workflow need verification on the designated device.
 
 ## TV broadcast
